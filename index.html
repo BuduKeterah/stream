@@ -1,105 +1,195 @@
-<!DOCTYPE html><html><head>
-<style>div a img{visibility:hidden;}body{margin:0;background-color: black;}</style>
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<meta name="referrer" content="no-referrer" />
+<html lang="en"><head>
+  <meta charset="UTF-8">
   
-<script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.min.js' crossorigin='anonymous'></script>
-<!-- <script src="./shaka.php?js=16888&libraryfont=Arial"></script> -->
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css' crossorigin='anonymous' />
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
 
 
-<body>
-<style>
-    /* Add your gradient styles here */
-    .shaka-seek-bar-container .shaka-seek-bar {
-      background:  #f90303;
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tv3/manifest.m3u8</title>
+
+  <link rel="stylesheet" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-3f5d2eba435c38fad3be0c972eb70c6c30f714f251dc2d2c8e6968c30ce359f4.css">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+
+
+  <title>Tv3/manifest.m3u8</title>
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
     }
-.shaka-volume-bar-container .shaka-volume-bar {
-      background:  #f90303;
-    }
-    /* Change color of all Shaka Player SVG icons */
-    .shaka-video-container .material-icons-round {
-      color: #28f903;
-    }
-.shaka-spinner-path {
-  stroke-dasharray: 1, 2000;
-  stroke-dashoffset: 0;
-  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-  stroke-linecap: round;
-}
-@keyframes color {
-  100%,
-  0% {
-    stroke: #d62d20;
-  }
-  40% {
-    stroke: #0057e7;
-  }
-  66% {
-    stroke: #008744;
-  }
-  80%,
-  90% {
-    stroke: #ffa700;
-  }
-}
+    .referer-warning span { font-family: initial; }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
   </style>
-<div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'><video autoplay data-shaka-player poster="https://i.imgur.com/PvkEhiS.png" id='video' style='width:100%;height:100%;'></video>
-</div>
-  <script>
+</head>
 
-const manifestUri = "https://linearjitp-playback.astro.com.my/dash-wv/linear/2700/default_ott.mpd";
+<body class="">
+  
+
+  <div id="result-iframe-wrap" role="main">
+    <iframe id="result" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; &gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  
+
+    &lt;link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; /&gt;
+
+    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;&gt;
+
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; /&gt;
+
+    &lt;link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot; color=&quot;#111&quot; /&gt;
+
+
+
+  
+    &lt;script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;&gt;&lt;/script&gt;
+
+
+  &lt;title&gt;Tv3/manifest.m3u8&lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://codepen.io/ejunds-din/pen/WbQXxRj&quot;&gt;
+  &lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;TV3&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,auto, initial-scale=1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://ejunds.github.io/mifn-iptv/style.css&quot;&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.debug.min.js&quot;&gt;
+&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css&quot;&gt;
+&lt;/head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://public.codepenassets.com/css/normalize-5.0.0.min.css&quot;&gt;
+
+  
+  
+
+  &lt;script&gt;
+  window.console = window.console || function(t) {};
+&lt;/script&gt;
+
+  
+  
+&lt;/head&gt;
+
+&lt;body translate=&quot;no&quot;&gt;
+  &lt;div data-shaka-player-container=&quot;&quot; style=&quot;width: 100%; height: 100%; cursor: none;&quot; class=&quot;shaka-mobile shaka-video-container&quot; shaka-controls=&quot;true&quot;&gt;
+  &lt;video autoplay=&quot;&quot; data-shaka-player=&quot;&quot; id=&quot;video&quot; style=&quot;width:100%;height:100%;&quot; class=&quot;shaka-video&quot; src=&quot;&quot;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+  
+    &lt;script id=&quot;rendered-js&quot; &gt;
+&quot;use strict&quot;;
+const manifestUri = &quot;https://mifntechnology.github.io/siaranMy/channels/Tv3/manifest.m3u8?Auth_key=3bc3f0e518aed92e80a98118e5bc2c10&amp;Token=5fce364fbc4499856597b19a96f44648&quot;;
+function initApp() {
+    shaka.polyfill.installAll();
+    if (shaka.Player.isBrowserSupported()) {
+        init();
+    }
+    else {
+        console.error(&quot;Browser not supported!&quot;);
+    }
+}
 async function init() {
-const video = document.getElementById('video');
-const ui = video['ui'];
-const controls = ui.getControls();
-const player = controls.getPlayer();
-window.player = player;
-window.ui = ui;
-player.setTextTrackVisibility(true);
-player.configure({
-drm: {"clearKeys": {
-      '84bf9ad6848be7db20f9d16823deef10':'654f2d25a5bfb27c9e5ae0852584a166'},
-},
-  
-abr: {
-				defaultBandwidthEstimate: 16888,
-                enabled: true,
-                restrictions: {
-  			    minHeight: 359,
-  			    maxHeight: 720  		        }
-			},
-});
-player.addEventListener('error', onPlayerErrorEvent);
-controls.addEventListener('error', onUIErrorEvent);
-try {
-await player.load(manifestUri);
-console.log('The video has now been loaded!');
-} catch (error) {
-onPlayerError(error);
+    const video = document.getElementById(&quot;video&quot;);
+    const ui = video[&quot;ui&quot;];
+    const controls = ui.getControls();
+    const player = controls.getPlayer();
+    const config = {
+        seekBarColors: {
+            base: &quot;rgba(66, 133, 244, 0.35)&quot;,
+            buffered: &quot;rgba(66, 133, 244, 0.6)&quot;,
+            played: &quot;rgba(66, 133, 244, 0.8)&quot;
+        },
+        volumeBarColors: {
+            base: &quot;rgba(66, 133, 244, 0.8)&quot;,
+            level: &quot;rgb(66, 133, 244)&quot;
+        }
+    };
+    ui.configure(config);
+    player.configure({
+        drm: {
+            clearKeys: {
+                // 'key-id-in-hex': 'key-in-hex',
+                &quot;3bc3f0e518aed92e80a98118e5bc2c10&quot;: &quot;5fce364fbc4499856597b19a96f44648&quot;
+            }
+        }
+    });
+    window.player = player;
+    window.ui = ui;
+    window.controls = controls;
+    player.addEventListener(&quot;error&quot;, onPlayerErrorEvent);
+    controls.addEventListener(&quot;error&quot;, onUIErrorEvent);
+    try {
+        await player.load(manifestUri);
+        console.log(&quot;The video has now been loaded!&quot;);
+    }
+    catch (error) {
+        onPlayerError(error);
+    }
+    function onPlayerErrorEvent(errorEvent) {
+        onPlayerError(event.detail);
+    }
+    function onPlayerError(error) {
+        console.error(&quot;Error code&quot;, error.code + &quot;:&quot;, &quot;Video could not be loaded!&quot;, &quot;[Media not found].&quot;);
+    }
+    function onUIErrorEvent(errorEvent) {
+        onPlayerError(event.detail);
+    }
 }
-
-
-
-}
-
-function onPlayerErrorEvent(errorEvent) {
-onPlayerError(event.detail);
-}
-
-function onPlayerError(error) {
-console.error('Error code', error.code, 'object', error);
-}
-
-function onUIErrorEvent(errorEvent) {
-onPlayerError(event.detail);
-}
-
 function initFailed(errorEvent) {
-console.error('Unable to load the UI library!');
+    console.error(&quot;Unable to load the UI library!&quot;);
 }
-document.addEventListener('shaka-ui-loaded', init);
-document.addEventListener('shaka-ui-load-failed', initFailed);
+document.addEventListener(&quot;shaka-ui-loaded&quot;, init);
+document.addEventListener(&quot;shaka-ui-load-failed&quot;, initFailed);
+document.addEventListener(&quot;DOMContentLoaded&quot;, initApp);
+//# sourceURL=pen.js
+  &lt;/script&gt;
+
   
-  
-  </script>
+&lt;/body&gt;
+
+&lt;/html&gt;
+" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer *; bluetooth *; camera *; clipboard-read *; clipboard-write *; display-capture *; encrypted-media *; geolocation *; gyroscope *; language-detector *; language-model *; microphone *; midi *; rewriter *; serial *; summarizer *; translator *; web-share *; writer *; xr-spatial-tracking *" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+  </div>
+
+
+
+
+</body></html>
